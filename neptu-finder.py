@@ -70,7 +70,7 @@ def main():
   neptu_hari = neptu_hari[days_id]
   
   #mencari dimana jatuhnya pasaran menggunakan metode selisih hari lalu dibagi dengan 5 kemudian ambil sisanya
-  #jika sisa=0 pahing, sisa=1 pon, sisa=2 wage, sisa=3 kliwon, sisa=4 kliwon
+  #jika sisa=0 pahing, sisa=1 pon, sisa=2 wage, sisa=3 kliwon, sisa=4 legi
   pasaran = arr_pasaran[selisih % 5]
   
   neptu_pasaran = {
