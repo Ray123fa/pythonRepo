@@ -47,7 +47,7 @@ def main():
   typed = input("Type one off all: ")
   
   if typed not in arr_typed:
-    print("Salah woi")
+    print("Your input is wrong")
   else:
     if typed == "1":
       addition()
