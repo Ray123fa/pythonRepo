@@ -53,7 +53,7 @@ def main():
   opsi = input("Pilih opsi: ")
   
   if opsi not in arr_opsi:
-    print("Salah woi")
+    print("Opsi yang dipilih tidak sesuai")
   else:
     if opsi == "1":
       txtToBin()
