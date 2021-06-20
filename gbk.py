@@ -1,7 +1,6 @@
 #Gunting(G), Batu(B), Kertas(K)
 
-import time, datetime, random
-from datetime import date
+import time, random
 
 def false():
   arr_gesture = ["G", "B", "K"]
