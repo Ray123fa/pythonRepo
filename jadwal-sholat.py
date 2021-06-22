@@ -20,7 +20,7 @@ year = today[:4]
 month = today[5:7]
 date = today[-2:]
 
-api = req.get("https://api.aladhan.com/v1/timings/{}?latitude=-3.320807&longitude=114.638840&method=4".format(date + "-" + month + "-" + year)) #Daerah Sei Lulut dan sekitarnya
+api = req.get(f"https://api.aladhan.com/v1/timings/{date}-{month}-{year}?latitude=-3.320807&longitude=114.638840&method=4") #Daerah Sei Lulut dan sekitarnya
 result = api.json()
 
 dt = time.strftime("%A, %d %B %Y", time.localtime()) #gregorian date
