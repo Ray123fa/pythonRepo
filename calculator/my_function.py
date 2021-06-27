@@ -1,12 +1,9 @@
 from sympy import symbols, Eq, solve
 from math import log, sqrt, isqrt
 from fractions import Fraction
-from cprint import cprint
 import re
 
-def addition():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def addition(first, second):
   result = first + second 
   
   if str(first)[-2:] == ".0":
@@ -21,9 +18,7 @@ def addition():
   else:
     print(f"Hasil dari {first} + {second} adalah {result}")
     
-def substraction():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def substraction(first, second):
   result = first - second
 
   if str(first)[-2:] == ".0":
@@ -38,9 +33,7 @@ def substraction():
   else:
     print(f"Hasil dari {first} - {second} adalah {result}")
   
-def multiplication():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def multiplication(first, second):
   result = first * second
   
   if str(first)[-2:] == ".0":
@@ -55,9 +48,7 @@ def multiplication():
   else:
     print(f"Hasil dari {first} × {second} adalah {result}")
   
-def division():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def division(first, second):
   result = first / second
   
   if str(first)[-2:] == ".0":
@@ -72,9 +63,7 @@ def division():
   else:
     print(f"Hasil dari {first} : {second} adalah {result}")
   
-def powered():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def powered(first, second):
   result = first ** second
   
   if str(first)[-2:] == ".0":
@@ -89,9 +78,7 @@ def powered():
   else:
     print(f"Hasil dari {first}^{second} adalah {result}")
 
-def mod():
-  first = float(input("\nKetik angka pertama: "))
-  second = float(input("Ketik angka kedua: "))
+def mod(first, second):
   result = first % second
   
   if str(first)[-2:] == ".0":
@@ -106,10 +93,7 @@ def mod():
   else:
     print(f"Hasil dari {first} mod {second} adalah {result}")
 
-def logarithm():
-  cprint("\nCase-example:\n²log(4) = ?? --> 2 disebut basis dan 4 disebut numerus\nSyarat:\n• basis > 0 dan basis ≠ 1\n• numerus > 0\n", c="c")
-  basis = float(input("Masukkan nilai basis: "))
-  numerus = float(input("Masukkan bilangan numerus: "))
+def logarithm(basis, numerus):
   result = log(numerus, basis)
   
   if str(basis)[-2:] == ".0":
@@ -125,14 +109,9 @@ def logarithm():
     result = round(result, 5)
     print(f"Hasil aproksimasi dari ^{basis} log({numerus}) adalah {result}")
 
-def quadratic_eq():
-  cprint("\nCase-example:\nCarilah akar-akar persamaan ax²±bx±c dengan a,b,c dalam bil bulat atau bil desimal dan x anggota bilangan real\n", c="c")
-  
+def quadratic_eq(a, b, c):
   x = symbols("x")
   
-  a = Fraction(float(input("Masukkan nilai a: ")))
-  b = Fraction(float(input("Masukkan nilai b: ")))
-  c = Fraction(float(input("Masukkan nilai c: ")))
   y = a*x**2 + (b*x) + (c)
   y = Eq(y, 0) #persamaan y memiliki hasil 0
   result = solve(y, x) #fungsi untuk menyelesaikan persamaan y dan mencari nilai x
